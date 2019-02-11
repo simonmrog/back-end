@@ -11,9 +11,11 @@
 	$update = $connection -> query ("UPDATE mountains SET name = '$name', altitude = '$altitude', town = '$town', department = '$department' WHERE id = '$id' ");
 
 	if ($update)
-		echo "Data udpated.";
+		echo "<script> alert ('Data updated');";
 	else
-		echo "Error updating data.";	
+		echo "Error updating data.";
+	echo "location.href = 'index.php' </script>";
+
 ?>
 
 <!DOCTYPE html>

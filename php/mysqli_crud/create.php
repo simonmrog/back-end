@@ -10,9 +10,10 @@
 	$create = $connection -> query ("INSERT INTO mountains (id, name, altitude, town, department) VALUES ('', '$name', '$altitude', '$town', '$department')");
 
 	if ($create)
-		echo "Data saved.";
+		echo "<script> alert ('Data added to the database.');";
 	else
-		echo "Error saving data.";	
+		echo "Error adding data.";
+	echo "location.href = 'index.php' </script>";
 
 ?>
 
