@@ -19,7 +19,6 @@ submitButton.addEventListener("click", function validateForm (event) {
    let buy = radioButtons [1];
    let free = radioButtons [2];
 
-
    //CREAMOS UN ARREGLO EN JAVASCRIPT USANDO LA INFORMACIÓN DEL TEXTAREA
    let lines = data.value.split (";");
    let places = new Array ();
@@ -30,10 +29,10 @@ submitButton.addEventListener("click", function validateForm (event) {
    //DISMINUIMOS LA POSICIÓN EN UNO, CONSISTENTE CON LAS POSICIONES DE LA MATRIZ
    row--;
    column--;
-   
+
    //COMENZAMOS A VERIFICAR LAS CONDICIONES
    if (isNaN (row) || isNaN (column))  flag = false;
-   if (row < 1 || row > 5 || column < 1 || column > 5) flag = false;
+   if (row < 0 || row > 4 || column < 0 || column > 4) flag = false;
    if (book.checked) {
       if (places[row][column] == "R" || places[row][column] == "V") flag = false;
    }
@@ -45,8 +44,12 @@ submitButton.addEventListener("click", function validateForm (event) {
    }
    else  flag = false;
    
+   debugger;
    //VALIDACIÓN FINAL
-   if (flag) alert ("Operación realizada con éxito");      
+   if (flag) {
+
+      alert ("Operación realizada con éxito");
+   }    
    else {
       alert ("La operación no pudo ser realizada");
       event.preventDefault ();

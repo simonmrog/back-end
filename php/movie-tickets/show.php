@@ -29,7 +29,7 @@
          echo "<tr>";
          echo "<th>". ($i+1) . "</th>";
          for ($j=0; $j < 5; $j++) {
-            echo "<td>" . $places[$i][$j] . "</td>";
+            echo "<td id='place$i,$j'>" . $places[$i][$j] . "</td>";
          }
          echo "</tr>";
       }
